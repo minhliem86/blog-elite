@@ -72,14 +72,6 @@
                         @endif
                     <div class="wrap-pagination">
                         @include ('Frontend::custom-pagination.paginate',['paginator' =>$student])
-                        {{-- <div class="pagination custom clearfix">
-                        	<a href="#">First</a>
-                        	<a href="#">1</a>
-                        	<a href="#">2</a>
-                        	<a href="#">3</a>
-                        	<a href="#">Last</a>
-                        </div> --}}
-
                     </div>
                     </div> <!-- end sidebar content -->
                     <div class="clear"></div>
