@@ -6,11 +6,10 @@ class Type extends Model {
 
 	public $table='types';
 
-  protected $fillable = ['name','order', 'status'];
+  protected $fillable = ['name','order', 'status','slug'];
 
-	public function students()
-	{
-		return $this->hasMany('App\Models\Student::class');
-	}
-
+  public function students()
+  {
+	  return $this->hasMany('App\Models\Student', 'type_id');
+  }
 }

@@ -68,12 +68,13 @@ class TypeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
 		$order = $this->type->getOrder();
-
 		$data = [
 			'name' => $request->input('name'),
+			'slug' => \Unicode::make($request->input('name')),
+			'order' => $order,
 		];
 		$this->type->create($data);
 		Notification::success('Created.');
@@ -99,7 +100,8 @@ class TypeController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$type = $this->type->find($id);
+		return view('Admin::pages.type.view', compact('type'));
 	}
 
 	/**
@@ -108,9 +110,17 @@ class TypeController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(Request $request, $id)
 	{
-		//
+		$data = [
+			'name' => $request->input('name'),
+			'slug' => \Unicode::make($request->input('name')),
+			'order' => $request->input('order'),
+			'status' => $request->input('status'),
+		];
+		$this->type->update($data, $id);
+		Notification::success('Updated.');
+		return redirect()->route('admin.type.index');
 	}
 
 	/**
@@ -121,25 +131,54 @@ class TypeController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		$this->type->delete($id);
+		Notification::success('Deleted.');
+		return redirect()->route('admin.type.index');
 	}
 
 	// DELETE ALL
-	public function deleteAll()
+	public function deleteAll(Request $request)
 	{
-
+		if(!$request->ajax()){
+			abort(404);
+		}else{
+			 $data = $request->arr;
+			 $response = $this->type->deleteAll($data);
+			 return response()->json(['msg' => 'ok']);
+		}
 	}
 
 	// UPDATE ORDER
 	public function postAjaxUpdateOrder(Request $request)
 	{
-
+		if(!$request->ajax())
+		{
+			abort('404', 'Not Access');
+		}else{
+			$data = $request->input('data');
+			foreach($data as $k => $v){
+				$upt  =  [
+					'order' => $v,
+				];
+				$obj = $this->type->find($k);
+				$obj->update($upt);
+			}
+			return response()->json(['msg' =>'ok', 'code'=>200], 200);
+		}
 	}
 
 	// UPDATE STATUS
 	public function postAjaxUpdateStatus(Request $request)
 	{
-
+		if(!$request->ajax())
+        {
+            abort('404', 'Not Access');
+        }else{
+            $value = $request->input('value');
+            $id = $request->input('id');
+            $this->type->update(['status' => $value], $id);
+            return response()->json(['msg' =>'ok', 'code'=>200], 200);
+        }
 	}
 
 

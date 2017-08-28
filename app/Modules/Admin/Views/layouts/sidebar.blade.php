@@ -13,6 +13,7 @@
         @if(Auth::admin()->get()->hasRole('admin'))
         <li class="{!!Active::setActive(2,'dashboard')!!}"><a href="{!!url('admin/dashboard')!!}"><i class="fa fa-photo"></i> <span>Dashboard</span></a></li>
         <li class="{!!Active::setActive(2,'type')!!}"><a href="{!!route('admin.type.index')!!}"><i class="fa fa-photo"></i> <span>Type</span></a></li>
+        <li class="{!!Active::setActive(2,'student')!!}"><a href="{!!route('admin.student.index')!!}"><i class="fa fa-photo"></i> <span>Student</span></a></li>
          @endif
       </ul>
       <!-- /.sidebar-menu -->

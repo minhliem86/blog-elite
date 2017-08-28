@@ -3,9 +3,9 @@
     <!-- Logo -->
     <a href="{!!url('/admin/dashboard')!!}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>O</b>SC</span>
+      <span class="logo-mini"><b>E</b>LITE</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>OSC</span>
+      <span class="logo-lg"><b>Admin</b>ELITE</span>
     </a>
 
     <!-- Header Navbar -->

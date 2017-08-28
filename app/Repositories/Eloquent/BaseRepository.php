@@ -54,9 +54,10 @@ abstract class BaseRepository implements RestfulInterface{
      	 * @param type
      	 * @return void
     	 */
-      public function paginate($limit = null, $columns = array('*'))
+      public function paginate($limit = null, $columns = array('*'), $with = [])
       {
-        return $this->model->paginate($limit, $columns);
+         $query = $this->make($with);
+         return $query->paginate($limit, $columns);
       }
 
         /**

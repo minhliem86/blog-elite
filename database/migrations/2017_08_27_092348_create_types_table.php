@@ -16,6 +16,7 @@ class CreateTypesTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('name')->nullable();
+			$table->string('slug')->nullable();
 			$table->integer('order')->default(1)->nullable();
 			$table->boolean('status')->default(1);
 			$table->timestamps();

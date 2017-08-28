@@ -16,10 +16,14 @@ class CreateStudentsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('student_name')->nullable();
+			$table->string('slug')->nullable();
 			$table->string('student_age')->nullable();
 			$table->string('student_year')->nullable();
 			$table->text('student_content')->nullable();
-			$table->integer('center_id');
+			$table->string('student_img')->nullable();
+			$table->string('center')->nullable();
+			$table->integer('order')->nullable();
+			$table->boolean('status')->default(1);
 			$table->integer('type_id')->unsigned();
 			$table->foreign('type_id')->references('id')->on('types')->onDelete('cascade');
 			$table->timestamps();

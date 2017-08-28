@@ -6617,7 +6617,7 @@ input[type=submit].solidbg
 [8. Pagination]
 */
 
-.pagination
+/*.pagination
 {
 	margin: 0 0 20px 0;
 	float: left;
@@ -6655,7 +6655,7 @@ input[type=submit].solidbg
 .pagination_detail
 {
 	float: right;
-}
+}*/
 
 .slideshow #thumbNav
 {
@@ -6747,6 +6747,41 @@ input[type=submit].solidbg
 #page_content_wrapper ol
 {
 	margin: 15px 0 15px 40px;
+}
+
+/*CUSTOMIZE PAGINATION*/
+body {
+	font-family: "Lucida Sans","Lucida Grande",sans-serif;
+	font-size: 76%;
+	background: #EFEFEF;
+}
+
+.pagination.custom {
+    text-align: right;
+    margin: 20px
+}
+.pagination.custom a, .pagination.custom strong {
+    background: #fff;
+    display: inline-block;
+    margin-right: 3px;
+    padding: 4px 12px;
+    text-decoration: none;
+	line-height: 1.5em;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.pagination.custom a:hover {
+    background-color: #BEBEBE;
+    color: #fff;
+}
+.pagination.custom a:active {
+	background: rgba(190, 190, 190, 0.75);
+}
+.pagination.custom strong {
+    color: #fff;
+    background-color: #BEBEBE;
 }
 
 /*------------------------------------------------------------------

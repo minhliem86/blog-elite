@@ -39,12 +39,19 @@ Route::group(['prefix'=>'admin','namespace'=>'App\Modules\Admin\Controllers'],fu
 		Route::get('dashboard',['as'=>'admin','uses'=>'AdminController@index']);
 
 		Route::group(['middleware'=>'checkAdminRole'], function(){
-			/*COUTRY*/
+			/*TYPE*/
 			Route::post('type/deleteAll',['as'=>'admin.type.deleteAll','uses'=>'TypeController@deleteAll']);
 			Route::any('type/getData',['as'=>'admin.type.getData','uses'=>'TypeController@getData']);
 			Route::post('type/postAjaxUpdateOrder',['as'=>'admin.type.postAjaxUpdateOrder','uses'=>'TypeController@postAjaxUpdateOrder']);
 			Route::post('type/postAjaxUpdateStatus',['as'=>'admin.type.postAjaxUpdateStatus','uses'=>'TypeController@postAjaxUpdateStatus']);
 			Route::resource('type','TypeController');
+
+			/*STUDENT*/
+			Route::post('student/deleteAll',['as'=>'admin.student.deleteAll','uses'=>'StudentController@deleteAll']);
+			Route::any('student/getData',['as'=>'admin.student.getData','uses'=>'StudentController@getData']);
+			Route::post('student/postAjaxUpdateOrder',['as'=>'admin.student.postAjaxUpdateOrder','uses'=>'StudentController@postAjaxUpdateOrder']);
+			Route::post('student/postAjaxUpdateStatus',['as'=>'admin.student.postAjaxUpdateStatus','uses'=>'StudentController@postAjaxUpdateStatus']);
+			Route::resource('student','StudentController');
 			/*Image*/
 			Route::post('image/deleteall',['as'=>'admin.image.deleteall','uses'=>'ImageController@deleteAll']);
 			Route::resource('image','ImageController');

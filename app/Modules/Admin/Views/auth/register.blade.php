@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>AdminOSC | Registration Page</title>
+	<title>AdminELITE | Registration Page</title>
 	<!-- Tell the browser to be responsive to screen width -->
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<meta content="noindex, nofollow" name="robots">
@@ -28,7 +28,7 @@
 <body class="hold-transition register-page">
 	<div class="register-box">
 		<div class="register-logo">
-			<a href="{!!url('/')!!}"><b>Admin</b>LTE</a>
+			<a href="{!!url('/')!!}"><b>Admin</b>ELITE</a>
 		</div>
 		<div class="register-box-body">
 			<p class="login-box-msg">Register a new membership</p>
