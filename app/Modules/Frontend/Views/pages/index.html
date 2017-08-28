@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-US" >
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<meta name="format-detection" content="telephone=no">
+		<title>Blog | Elite Blog</title>
+
+		<style type="text/css">
+		img.wp-smiley,
+		img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 .07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+		}
+		</style>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=vietnamese" rel="stylesheet">
+		<link rel='stylesheet' id='animation.css-css'  href='css/animation.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='magnific-popup-css'  href='css/magnific-popup.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='flexslider-css'  href='js/flexslider/flexslider.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='tooltipster-css'  href='css/tooltipster.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='parallax-css'  href='css/parallax.min.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='flexslider-css-css'  href='js/flexslider/flexslider.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='supersized-css'  href='css/supersized.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='odometer-theme-css'  href='css/odometer-theme-minimal.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='screen-css-css'  href='css/screen.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='fontawesome-css'  href='css/font-awesome.min.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='responsive-css'  href='css/grid.css' type='text/css' media='all' />
+		<script type='text/javascript' src='js/jquery-2.1.1.js'></script>
+		<script type='text/javascript' src='js/jquery.easing.js'></script>
+
+		<script src="js/ParallaxScroll.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#mobile_nav_icon').click(function() {
+					$('body,html').animate({scrollTop:0},100);
+					$('body').toggleClass('js_nav');
+				});
+				$('#close_mobile_menu').click(function() {
+					$('body').removeClass('js_nav');
+				});
+
+				$('.sub-menu').hide();
+				$('#mobile_main_menu li a').click(function(){
+					var sub = $(this).parent('li').find('.sub-menu');
+					if(sub.is(':hidden')){
+						sub.stop().slideDown();
+					}else{
+						sub.stop().slideUp();
+					}
+					return false;
+				})
+			})
+		</script>
+		<link rel="canonical" href="index.html" />
+	</head>
+	<body>
+		<input type="hidden" id="pp_footer_style" name="pp_footer_style" value="4"/>
+
+		<!-- Begin mobile menu -->
+		<div class="mobile_menu_wrapper">
+			<a id="close_mobile_menu" href="#"><i class="fa fa-times-circle"></i></a>
+			<div class="menu-main-menu-container">
+				<ul id="mobile_main_menu" class="mobile_main_nav">
+					<li class="menu-item"><a href="#">KET</a>
+						<ul class="sub-menu">
+							<li  class="menu-item "><a href="http://themes.themegoods.com/altair/demo/tour-grid-fullwidth/">Nguyễn Văn A</a></li>
+							<li  class="menu-item "><a href="http://themes.themegoods.com/altair/demo/tour-grid-contain/">Nguyễn Văn B</a></li>
+							<li  class="menu-item "><a href="http://themes.themegoods.com/altair/demo/tour-classic-fullwidth/">Nguyễn Văn C</a></li>
+						</ul>
+					</li>
+					<li class="menu-item"><a href="http://themes.themegoods.com/altair/demo/sample-page/">PET</a>
+						<ul class="sub-menu">
+							<li  class="menu-item "><a href="http://themes.themegoods.com/altair/demo/tour-grid-fullwidth/">Nguyễn Văn A</a></li>
+							<li  class="menu-item "><a href="http://themes.themegoods.com/altair/demo/tour-grid-contain/">Nguyễn Văn B</a></li>
+							<li  class="menu-item "><a href="http://themes.themegoods.com/altair/demo/tour-classic-fullwidth/">Nguyễn Văn C</a></li>
+						</ul>
+				</li>
+				<li class="menu-item "><a href="#">Flyer</a>
+					<ul class="sub-menu">
+						<li  class="menu-item "><a href="http://themes.themegoods.com/altair/demo/tour-grid-fullwidth/">Nguyễn Văn A</a></li>
+						<li  class="menu-item "><a href="http://themes.themegoods.com/altair/demo/tour-grid-contain/">Nguyễn Văn B</a></li>
+						<li  class="menu-item "><a href="http://themes.themegoods.com/altair/demo/tour-classic-fullwidth/">Nguyễn Văn C</a></li>
+					</ul>
+				</li>
+			</ul>
+			</div>
+		</div>
+		<!-- End mobile menu -->
+		<!-- Begin template wrapper -->
+		<div id="wrapper">
+				<div class="header_style_wrapper">
+					<div class="top_bar">
+						<div id="mobile_nav_icon"></div>
+						<div id="menu_wrapper">
+							<!-- Begin logo -->
+							<a id="custom_logo" class="logo_wrapper default" href="http://localhost/elite-blog">
+								<img src="images/logo.png" alt="" width="69" height="33"/>
+							</a>
+							<a id="custom_logo_transparent" class="logo_wrapper hidden" href="http://localhost/elite-blog">
+								<img src="images/logo_white.png" alt="" width="69" height="33"/>
+							</a>
+							<!-- End logo -->
+							<!-- Begin main nav -->
+							<div id="nav_wrapper">
+								<div class="nav_wrapper_inner">
+									<div id="menu_border_wrapper">
+									</div>
+								</div>
+							</div>
+							<!-- End main nav -->
+						</div>
+					</div>
+				</div>
+				<br class="clear"/>
+				<div id="page_caption" >
+					<img src="images/bg.jpg" alt="" class="bg" data-parallax='{"smoothness": 10, "y": 230}'>
+					<div class="page_title_wrapper" >
+						<h1>ILA ELITE - VIP NIGHT</h1>
+						<!-- <div id="crumbs"><a href="http://localhost/elite-blog">Home</a> / <span class="current">Blog</span></div> -->
+					</div>
+				</div>
+
+				<!-- Begin content -->
+				<div id="page_content_wrapper" class="notransparent">
+					<div class="inner">
+						<!-- Begin main content -->
+						<div class="inner_wrapper">
+							<div class="full_width nopadding">
+								<div class="sidebar_wrapper left_sidebar hidden-xs">
+									<div class="sidebar">
+										<div class="content">
+											<ul class="sidebar_widget">
+												<li class="widget widget_PET">
+													<h2 class="widgettitle">PET</h2>
+													<ul>
+														<li><a href="http://themes.themegoods.com/altair/demo/standard-blog-post-with-image/">Nguyễn Quỳnh Anh</a></li>
+														<li><a href="http://themes.themegoods.com/altair/demo/standard-blog-post-with-image/">Phạm Văn Nghị</a></li>
+														<li><a href="http://themes.themegoods.com/altair/demo/standard-blog-post-with-image/">Nguyễn Văn A</a></li>
+														<li><a href="http://themes.themegoods.com/altair/demo/standard-blog-post-with-image/">Châu Gia Lâm</a></li>
+														<li><a href="http://themes.themegoods.com/altair/demo/standard-blog-post-with-image/">Nguyễn Phan Anh</a></li>
+
+													</ul>
+													<!-- <p class="seemore">Xem thêm</p> -->
+												</li>
+												<li class="widget widget_KET">
+													<h2 class="widgettitle">KET</h2>
+													<ul>
+														<li><a href="http://themes.themegoods.com/altair/demo/standard-blog-post-with-image/">Nguyễn Quỳnh Anh</a></li>
+														<li><a href="http://themes.themegoods.com/altair/demo/standard-blog-post-with-image/">Phạm Văn Nghị</a></li>
+														<li><a href="http://themes.themegoods.com/altair/demo/standard-blog-post-with-image/">Nguyễn Văn A</a></li>
+														<li><a href="http://themes.themegoods.com/altair/demo/standard-blog-post-with-image/">Châu Gia Lâm</a></li>
+														<li><a href="http://themes.themegoods.com/altair/demo/standard-blog-post-with-image/">Nguyễn Phan Anh</a></li>
+													</ul>
+													<!-- <p class="seemore">Xem thêm</p> -->
+												</li>
+											</ul>
+
+										</div>
+
+									</div>
+									<br class="clear"/>
+
+									<div class="sidebar_bottom"></div>
+								</div> <!-- end sidebar wrapper -->
+								<div class="sidebar_content left_sidebar">
+
+									<!-- Begin each blog post -->
+									<div class="post type-post status-publish">
+										<div class="post_wrapper">
+
+											<div class="post_content_wrapper">
+												<div class="post_img static fadeIn">
+							    	    	<a href="#">
+							    	    		<img src="images/student/demo.jpg" alt="Nguyễn Văn A" class="img-responsive">
+								          </a>
+							    	    </div>
+												<div class="post_header">
+													<h5><a href="http://localhost/elite-blog/2017/08/25/hello-world/" title="Nguyễn Quỳnh Anh">Nguyễn Quỳnh Anh</a></h5>
+
+													<div class="post_detail">
+														ILA Hoàng Văn Thụ - Flyer
+													</div>
+
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae sapiente atque vitae animi ex explicabo eaque voluptate laboriosam, odio fugit, aperiam, cum sunt eos quibusdam ipsam rem reprehenderit debitis et.</p>
+												</div>	<!-- end post header -->
+
+											</div> <!-- end post content -->
+
+										</div>	<!--end post wrapper -->
+									</div>
+									<br class="clear"/>
+									<!-- End each blog post -->
+
+									<div  class="post type-post status-publish">
+										<div class="post_wrapper">
+
+											<div class="post_content_wrapper">
+												<div class="post_img static fadeIn">
+							    	    	<a href="#">
+							    	    		<img src="images/student/demo.jpg" alt="Nguyễn Văn A" class="img-responsive">
+								            </a>
+							    	    </div>
+												<div class="post_header">
+													<h5><a href="http://localhost/elite-blog/2017/08/25/hello-world/" title="Nguyễn Văn A">Nguyễn Văn A</a></h5>
+
+													<div class="post_detail">
+														ILA Nguyễn Đình Chiểu - KET
+													</div>
+
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis voluptas, ullam sint et nisi aspernatur asperiores soluta autem nostrum dolorum. Adipisci distinctio placeat quibusdam, eos ad quidem vel impedit suscipit.</p>
+												</div>	<!-- end post header -->
+
+											</div> <!-- end post content -->
+
+										</div>	<!--end post wrapper -->
+									</div>
+									<br class="clear"/>
+									<!-- End each blog post -->
+
+								</div> <!-- end sidebar content -->
+								<div class="clear"></div>
+
+							</div> <!-- end  sidebar_content -->
+
+						</div>
+						<!-- End main content -->
+					</div>
+				</div> <!-- end page_content_wrapper-->
+				<br class="clear"/>
+
+			<!-- <div class="footer_bar ">
+				<div id="footer" class="">
+					<ul class="sidebar_widget four">
+					</ul>
+
+					<br class="clear"/>
+				</div>
+
+				<div class="footer_bar_wrapper ">
+					<div class="social_wrapper">
+						<ul>
+							<li class="facebook"><a  href="#"><i class="fa fa-facebook"></i></a></li>
+							<li class="twitter"><a  href="http://twitter.com/#"><i class="fa fa-twitter"></i></a></li>
+							<li class="flickr"><a  title="Flickr" href="http://flickr.com/people/#"><i class="fa fa-flickr"></i></a></li>
+							<li class="youtube"><a  title="Youtube" href="http://youtube.com/channel/#"><i class="fa fa-youtube"></i></a></li>
+							<li class="vimeo"><a  title="Vimeo" href="http://vimeo.com/#"><i class="fa fa-vimeo-square"></i></a></li>
+							<li class="google"><a  title="Google+" href="#"><i class="fa fa-google-plus"></i></a></li>
+							<li class="pinterest"><a  title="Pinterest" href="http://pinterest.com/#"><i class="fa fa-pinterest"></i></a></li>
+							<li class="instagram"><a  title="Instagram" href="http://instagram.com/#"><i class="fa fa-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div> -->
+		</div>
+	</body>
+</html>
