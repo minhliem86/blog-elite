@@ -20,7 +20,7 @@ class HomeController extends Controller {
 
     public function index()
     {
-        $student = $this->student->paginate(10,['*'], ['types']);
+        $student = $this->student->paginate(2,['*'], ['types']);
         $type = $this->type->all(['*'], ['students']);
         return view('Frontend::pages.index', compact('student', 'type'));
     }

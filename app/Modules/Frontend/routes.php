@@ -3,7 +3,7 @@
 Route::group(['namespace'=>'App\Modules\Frontend\Controllers'],function(){
 	// Route::get('/',['as'=>'home','uses'=>'HomeController@getIndex']);
 
-	Route::get('/elite', ['as' => 'f.homepage', 'uses' => 'HomeController@index']);
+	Route::get('/', ['as' => 'f.homepage', 'uses' => 'HomeController@index']);
 
 	// IMPORT USER
 	Route::get('/import-user',['as' => 'f.importUser', 'uses'=>'ImportController@index']);

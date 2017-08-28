@@ -71,7 +71,7 @@
                             @endforeach
                         @endif
                     <div class="wrap-pagination">
-                        @include ('Frontend::custom-pagination.paginate',['paginator' =>$student])
+                        {{-- @include ('Frontend::custom-pagination.paginate',['paginator' =>$student]) --}}
                     </div>
                     </div> <!-- end sidebar content -->
                     <div class="clear"></div>
