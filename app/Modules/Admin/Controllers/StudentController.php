@@ -90,7 +90,7 @@ class StudentController extends Controller {
 		$order = $this->student->getOrder();
 		$data = [
 			'student_name' => $request->input('student_name'),
-			'slug' => \Unicode::make($request->input('name')),
+			'slug' => \Unicode::make($request->input('student_name')),
 			'student_age' => $request->input('student_age'),
 			'student_year' => $request->input('student_year'),
 			'student_content' => $request->input('student_content'),
@@ -145,7 +145,7 @@ class StudentController extends Controller {
 		}
 		$data = [
 			'student_name' => $request->input('student_name'),
-			'slug' => \Unicode::make($request->input('name')),
+			'slug' => \Unicode::make($request->input('student_name')),
 			'student_age' => $request->input('student_age'),
 			'student_year' => $request->input('student_year'),
 			'student_content' => $request->input('student_content'),

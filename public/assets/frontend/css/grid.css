@@ -312,7 +312,7 @@
 	#page_content_wrapper .inner { width: 100%; padding: 0; }
 	#page_content_wrapper .inner #page_main_content { margin-top: 0; padding-bottom: 0; }
 	#page_content_wrapper .inner, { width: 300px; margin: auto; }
-	#page_content_wrapper .inner .sidebar_content { width: 100%; margin-top: 0; padding-top: 20px; padding-bottom: 0; float: none; border: 0 !important; }
+	#page_content_wrapper .inner .sidebar_content { width: 100% !important; margin-top: 0; padding-top: 20px; padding-bottom: 0; float: none; border: 0 !important; }
 	#page_content_wrapper .inner .sidebar_content.full_width { width: 100%; margin-top: 0; padding-top: 30px; clear: both; }
 	#page_content_wrapper .inner #page_caption.sidebar_content.full_width { padding-bottom: 20px; }
 	#page_content_wrapper .inner .sidebar_content.full_width img { max-width: 300px; height: auto !important; }

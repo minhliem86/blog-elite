@@ -8,31 +8,21 @@
                 <div class="full_width nopadding">
                     @include('Frontend::layouts.sidebar_content')
                     <div class="sidebar_content left_sidebar">
-                        @if(!$student->isEmpty())
-                            @foreach($student as $item_student)
+                        @if($student)
                         <!-- Begin each blog post -->
                         <div class="post type-post status-publish">
                             <div class="post_wrapper">
-
                                 <div class="post_content_wrapper">
                                     <div class="post_img static fadeIn">
-                                <a href="{!!route('f.detail', $item_student->slug)!!}">
-                                    <img src="{!!asset('public/uploads'.$item_student->student_img)!!}" alt="{{$item_student->student_name}}" class="img-responsive">
-                              </a>
-                            </div>
+                                        <img src="{!!asset('public/uploads'.$student->student_img)!!}" alt="{{$student->student_name}}" class="img-responsive">
+                                    </div>
                                     <div class="post_header">
-                                        <h5><a href="{!!route('f.detail', $item_student->slug)!!}" title="{{$item_student->student_name}}">{{$item_student->student_name}}</a></h5>
-
+                                        <h5>{{$student->student_name}}</h5>
                                         <div class="post_detail">
-                                            {{$item_student->center}} - {{$item_student->types->name}}
+                                            {{$student->center}} - {{$student->types->name}}
                                         </div>
 
-                                        <p>{!!Str::words($item_student->student_content, 40)!!}</p>
-
-                                        <div class="wrap-read">
-                                            <a href="{!!route('f.detail', $item_student->slug)!!}" class="readmore">Xem thêm</a>
-                                        </div>
-
+                                        <p>{!!$student->student_content!!}</p>
                                     </div>	<!-- end post header -->
 
                                 </div> <!-- end post content -->
@@ -41,11 +31,7 @@
                         </div>
                         <br class="clear"/>
                         <!-- End each blog post -->
-                            @endforeach
                         @endif
-                    <div class="wrap-pagination">
-                        @include ('Frontend::custom-pagination.paginate',['paginator' =>$student])
-                    </div>
                     </div> <!-- end sidebar content -->
                     <div class="clear"></div>
 

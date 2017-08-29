@@ -1,6 +1,6 @@
 @if($paginator->hasPages())
     <div class="pagination custom clearfix">
-        @if ($paginator->firstItem())
+        @if ($paginator->currentPage() == 1)
         <a href="javascript:avoid()"><i class="fa fa-angle-double-left"></i></a>
         @else
         <a href="{{ $paginator->previousPageUrl() }}" rel="prev"><i class="fa fa-angle-double-left"></i> </a>

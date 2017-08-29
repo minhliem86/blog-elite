@@ -13,8 +13,7 @@ class ComposerServiceProvider extends ServiceProvider {
   */
   public function boot() {
   // Using class based composers...
-    
-
+  View::composer(['Frontend::layouts.mobile-menu', 'Frontend::layouts.sidebar_content'], 'App\ViewComposers\MyViewsComposer');
   }
 
   /**
