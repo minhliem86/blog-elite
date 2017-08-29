@@ -20,8 +20,25 @@ class HomeController extends Controller {
 
     public function index()
     {
-        $student = $this->student->paginate(2,['*'], ['types']);
+        $student = $this->student->getByOrderStudentPaginate(10,['*'], ['types']);
         $type = $this->type->all(['*'], ['students']);
         return view('Frontend::pages.index', compact('student', 'type'));
+    }
+
+    public function detail($slug)
+    {
+        $student = $this->student->firstByWhere('slug',$slug,['*'], ['types']);
+        return view('Frontend::pages.detail', compact('student'));
+    }
+
+    public function loadmore(Request $request)
+    {
+        if($request->ajax())
+        {
+            $type_id = $request->input('type_id');
+            $type = $this->type->find($type_id,['*'],['students']);
+            $view = view('Frontend::ajax.loadStudentSidebar', compact('type'))->render();
+            return response()->json(['rs' => $view]);
+        }
     }
 }

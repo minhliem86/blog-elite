@@ -13,9 +13,15 @@ class StudentRepository extends BaseRepository implements RestfulInterface{
         return get_class(new Student);
     }
 
-    public function first($columns = ['*'], $with= [])
+    public function firstByWhere($field,$value, $columns = ['*'], $with= [])
     {
         $query = $this->make($with);
-        return $query->first($columns);
+        return $query->where($field,$value)->first($columns);
+    }
+
+    public function getByOrderStudentPaginate($limit = 10, $columns = ['*'], $with = [])
+    {
+        $query = $this->make($with);
+        return $query->where('status',1)->OrderBy('id', 'ASC')->paginate($limit, $columns);
     }
 }
