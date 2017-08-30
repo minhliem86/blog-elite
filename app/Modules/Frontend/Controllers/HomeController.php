@@ -21,8 +21,7 @@ class HomeController extends Controller {
     public function index()
     {
         $student = $this->student->getByOrderStudentPaginate(10,['*'], ['types']);
-        $type = $this->type->all(['*'], ['students']);
-        return view('Frontend::pages.index', compact('student', 'type'));
+        return view('Frontend::pages.index', compact('student'));
     }
 
     public function detail($slug)

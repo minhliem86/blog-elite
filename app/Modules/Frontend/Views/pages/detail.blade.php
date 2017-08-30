@@ -8,7 +8,8 @@
                 <div class="full_width nopadding">
                     @include('Frontend::layouts.sidebar_content')
                     <div class="sidebar_content left_sidebar">
-                        @if($student)
+                        @include('Frontend::layouts.navi_type')
+                        @if(!empty($student))
                         <!-- Begin each blog post -->
                         <div class="post type-post status-publish">
                             <div class="post_wrapper">
@@ -21,8 +22,9 @@
                                         <div class="post_detail">
                                             {{$student->center}} - {{$student->types->name}}
                                         </div>
-
-                                        <p>{!!$student->student_content!!}</p>
+                                        <div class="post_content">
+                                            <p>{!!$student->student_content!!}</p>
+                                        </div>
                                     </div>	<!-- end post header -->
 
                                 </div> <!-- end post content -->

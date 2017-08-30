@@ -1,6 +1,6 @@
 <nav id="main-menu">
       <ul>
-        <li class="active"><a href="http://ila.edu.vn/" title="Trang chủ">Trang chủ</a> </li>
+        <li class="active"><a href="{!!route('f.homepage')!!}" title="Trang chủ">ILA ELITE</a> </li>
         <li class=""><a href="http://ila.edu.vn/beyond-english" title="Beyond English" class="has-dropdown">Beyond English</a></li>
         <li class=""><a href="http://ila.edu.vn/" title="Các khoá Tiếng Anh" class="has-dropdown">Các khoá Tiếng Anh</a></li>
         <li class=""><a href="http://ila.edu.vn/centers" title="Trung tâm đào tạo">Trung tâm đào tạo</a></li>

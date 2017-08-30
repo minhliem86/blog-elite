@@ -1,6 +1,7 @@
 @extends('Frontend::layouts.default')
 
 @section('content')
+
     <div id="page_content_wrapper" class="notransparent">
         <div class="inner">
             <!-- Begin main content -->
@@ -8,6 +9,7 @@
                 <div class="full_width nopadding">
                     @include('Frontend::layouts.sidebar_content')
                     <div class="sidebar_content left_sidebar">
+                        @include('Frontend::layouts.navi_type')
                         @if(!$student->isEmpty())
                             @foreach($student as $item_student)
                         <!-- Begin each blog post -->
@@ -27,7 +29,11 @@
                                             {{$item_student->center}} - {{$item_student->types->name}}
                                         </div>
 
-                                        <p>{!!Str::words($item_student->student_content, 40)!!}</p>
+                                        <div class="post_content">
+                                            <p>{!!Str::words($item_student->student_content, 40)!!}</p>    
+                                        </div>
+
+
 
                                         <div class="wrap-read">
                                             <a href="{!!route('f.detail', $item_student->slug)!!}" class="readmore">Xem thêm</a>

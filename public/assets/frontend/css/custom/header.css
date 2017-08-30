@@ -136,6 +136,7 @@
 .header #main-menu>ul>li>a {
     color: #fff;
     font-size: 12px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     display: inline-block;
     height: 44px;

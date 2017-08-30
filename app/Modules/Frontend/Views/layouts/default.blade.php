@@ -89,6 +89,21 @@
 						}
 					})
 				})
+				@if($mobile_detect->isMobile())
+				/*NAVI TYPE*/
+				$('.navi-type > li > a').click(function(){
+					var sub_nav = $(this).parent().find('.sub-navi-type');
+					if(sub_nav){
+						$('.sub-navi-type').slideUp();
+						if(sub_nav.is(':hidden')){
+							sub_nav.stop().slideDown();
+						}else{
+							sub_nav.stop().slideUp();
+						}
+					}
+					return false;
+				})
+				@endif
 			})
 		</script>
 		<link rel="canonical" href="index.html" />

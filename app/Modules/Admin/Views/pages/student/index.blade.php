@@ -59,7 +59,7 @@
                 }
             },
             columns: [
-               {data: 'id', name: 'students.id', 'orderable': false},
+               {data: 'id', name: 'students.id'},
                {data: 'student_name', name: 'students.student_name'},
                {data: 'name', name: 'types.name'},
                {data: 'order', name: 'students.order' , 'orderable': false},

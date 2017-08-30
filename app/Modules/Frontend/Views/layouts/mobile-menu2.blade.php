@@ -9,7 +9,7 @@
     <nav id="side-menu">
         <nav id="main-nav">
             <ul>
-                <li class="active"><a href="http://m.ila.edu.vn/" title="Trang chủ">Trang chủ</a></li>
+                <li class="active"><a href="{!!route('f.homepage')!!}/" title="ILA ELITE">ILA ELITE</a></li>
                 <li><a href="http://m.ila.edu.vn/beyond-english" title="Beyond English" class="has-dropdown">Beyond English</a></li>
                 <li><a href="http://m.ila.edu.vn" title="Các khoá Tiếng Anh" class="has-dropdown">Các khoá Tiếng Anh</a></li>
                 <li> <a href="http://m.ila.edu.vn/centers" title="">Tất cả trung tâm</a></li>
