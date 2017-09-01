@@ -57,7 +57,7 @@ class StudentController extends Controller {
 				';
 		 })->filter(function($query) use ($request){
 			if ($request->has('name')) {
-					$query->where('students.student_name', 'like', "%{$request->input('name')}%")->orWhere('types.name', 'like', "%{$request->input('name')}%");
+					$query->where('students.student_name_vi', 'like', "%{$request->input('name')}%")->orWhere('types.name', 'like', "%{$request->input('name')}%");
 			}
 			})->setRowId('id')->make(true);
 	}
@@ -69,7 +69,7 @@ class StudentController extends Controller {
 	 */
 	public function create()
 	{
-		$center = Center::lists('name_vi', 'name_vi');
+		$center = Center::lists('name_vi', 'id');
 		$type = $this->type->lists('name','id');
 		return view('Admin::pages.student.create', compact('type', 'center'));
 	}
@@ -93,10 +93,12 @@ class StudentController extends Controller {
 			'slug' => \Unicode::make($request->input('student_name')),
 			'student_age' => $request->input('student_age'),
 			'student_year' => $request->input('student_year'),
-			'student_content' => $request->input('student_content'),
+			'student_content_vi' => $request->input('student_content_vi'),
+			'student_content_en' => $request->input('student_content_en'),
 			'student_img' => $img,
 			'type_id' =>$request->input('type_id'),
-			'center' =>$request->input('center'),
+			'center_vi' =>Center::find($request->input('center'))->name_vi,
+			'center_en' =>Center::find($request->input('center'))->name_en,
 			'order' => $order,
 		];
 		$this->student->create($data);
@@ -124,7 +126,7 @@ class StudentController extends Controller {
 	public function edit($id)
 	{
 		$student = $this->student->find($id);
-		$center = Center::lists('name_vi', 'name_vi');
+		$center = Center::lists('name_vi', 'id');
 		$type = $this->type->lists('name','id');
 		return view('Admin::pages.student.view', compact('student', 'center', 'type'));
 	}
@@ -148,10 +150,12 @@ class StudentController extends Controller {
 			'slug' => \Unicode::make($request->input('student_name')),
 			'student_age' => $request->input('student_age'),
 			'student_year' => $request->input('student_year'),
-			'student_content' => $request->input('student_content'),
+			'student_content_vi' => $request->input('student_content_vi'),
+			'student_content_en' => $request->input('student_content_en'),
 			'student_img' => $img,
 			'type_id' =>$request->input('type_id'),
-			'center' =>$request->input('center'),
+			'center_vi' =>Center::find($request->input('center'))->name_vi,
+			'center_en' =>Center::find($request->input('center'))->name_en,
 			'order' => $request->input('order'),
 		];
 		$this->student->update($data, $id);

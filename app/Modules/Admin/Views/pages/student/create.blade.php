@@ -30,8 +30,18 @@
 					{!!Form::text('student_year',old('student_year'),array('class'=>'form-control'))!!}
 				</div>
                 <div class="form-group">
-					<label for="">Content</label>
-					{!!Form::textarea('student_content',old('student_content'),array('class'=>'form-control ckeditor'))!!}
+                    <ul  class="nav nav-pills">
+                        <li class="active"><a  href="#content_vi" data-toggle="tab">Content Vietnamese</a></li>
+                        <li><a href="#content_en" data-toggle="tab">Content English</a></li>
+                    </ul>
+                    <div class="tab-content clearfix">
+                        <div class="tab-pane active" id="content_vi">
+                                {!!Form::textarea('student_content_vi', old('student_content_vi'),array('class'=>'form-control ckeditor', 'placeholder' => 'Content Vi'))!!}
+                        </div>
+                        <div class="tab-pane" id="content_en">
+                                 {!!Form::textarea('student_content_en',old('student_content_en'),array('class'=>'form-control ckeditor', 'placeholder' => 'Content En'))!!}
+                        </div>
+                    </div>
 				</div>
                 <div class="form-group">
 					<label for="">Photo</label>

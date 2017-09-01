@@ -156,6 +156,7 @@ return [
 		 'Zizaco\Entrust\EntrustServiceProvider',
 		 'Maatwebsite\Excel\ExcelServiceProvider',
 		 'Codingo\Dropzoner\DropzonerServiceProvider',
+		 'Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider'
 
 	],
 
@@ -205,14 +206,14 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
 		'Form' => 'Collective\Html\FormFacade',
-  	'Html' => 'Collective\Html\HtmlFacade',
-  	'Datatables' => 'yajra\Datatables\Datatables',
-  	'Notification' => 'Krucas\Notification\Facades\Notification',
-  	'Image' => 'Intervention\Image\Facades\Image',
-  	'Str'      => 'Illuminate\Support\Str',
+	  	'Html' => 'Collective\Html\HtmlFacade',
+	  	'Datatables' => 'yajra\Datatables\Datatables',
+	  	'Notification' => 'Krucas\Notification\Facades\Notification',
+	  	'Image' => 'Intervention\Image\Facades\Image',
+	  	'Str'      => 'Illuminate\Support\Str',
 		'Entrust'   => 'Zizaco\Entrust\EntrustFacade',
 		'Excel' => 'Maatwebsite\Excel\Facades\Excel',
-		
+		'LaravelLocalization' => 'Mcamara\LaravelLocalization\Facades\LaravelLocalization'
 	],
 
 

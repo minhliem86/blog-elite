@@ -26,17 +26,17 @@
                                         <h5><a href="{!!route('f.detail', $item_student->slug)!!}" title="{{$item_student->student_name}}">{{$item_student->student_name}}</a></h5>
 
                                         <div class="post_detail">
-                                            {{$item_student->center}} - {{$item_student->types->name}}
+                                            {{LaravelLocalization::getCurrentLocale() === 'vi' ? $item_student->center_vi : $item_student->center_en }} - {{$item_student->types->name}}
                                         </div>
 
                                         <div class="post_content">
-                                            <p>{!!Str::words($item_student->student_content, 40)!!}</p>    
+                                            <p>{!!Str::words(LaravelLocalization::getCurrentLocale() === 'vi' ? $item_student->$item_student->student_content_vi : $item_student->$item_student->student_content_en, 40)!!}</p>
                                         </div>
 
 
 
                                         <div class="wrap-read">
-                                            <a href="{!!route('f.detail', $item_student->slug)!!}" class="readmore">Xem thêm</a>
+                                            <a href="{!!route('f.detail', $item_student->slug)!!}" class="readmore">{{trans('content.readmore')}}</a>
                                         </div>
 
                                     </div>	<!-- end post header -->

@@ -465,6 +465,7 @@
     text-transform: normal;
     z-index:5;
     line-height: 58px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .wrap-slider .slides li p.caption:after{

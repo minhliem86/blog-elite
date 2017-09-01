@@ -460,6 +460,7 @@
     text-transform: normal;
     z-index:5;
     line-height: 30px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .wrap-slider .slides li p.flex-caption:after{

@@ -40,4 +40,9 @@ class HomeController extends Controller {
             return response()->json(['rs' => $view]);
         }
     }
+
+    public function testLanguage()
+    {
+        return view('Frontend::pages.language');
+    }
 }

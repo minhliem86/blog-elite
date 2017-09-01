@@ -15,7 +15,7 @@
                         @endforeach
                     </ul>
                     @endif
-                    <p class="seemore" data-type="{{$item_type->id}}">Xem thêm</p>
+                    <p class="seemore" data-type="{{$item_type->id}}">{{trans('content.readmore')}}</p>
                 </li>
                 @endif
                 @endforeach

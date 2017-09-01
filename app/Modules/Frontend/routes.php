@@ -1,7 +1,9 @@
 <?php
 
-Route::group(['namespace'=>'App\Modules\Frontend\Controllers'],function(){
+Route::group(['prefix'=>LaravelLocalization::setLocale() ,'namespace'=>'App\Modules\Frontend\Controllers'],function(){
 	// Route::get('/',['as'=>'home','uses'=>'HomeController@getIndex']);
+
+	Route::get('/locale', ['as' => 'f.locale', 'uses' => 'HomeController@testLanguage']);
 
 	Route::get('/', ['as' => 'f.homepage', 'uses' => 'HomeController@index']);
 	Route::get('/elite/{slug}', ['as'=>'f.detail', 'uses' => 'HomeController@detail'])->where('slug', '[0-9A-Za-z.-\/]+');
@@ -10,8 +12,6 @@ Route::group(['namespace'=>'App\Modules\Frontend\Controllers'],function(){
 	// IMPORT USER
 	Route::get('/import-user',['as' => 'f.importUser', 'uses'=>'ImportController@index']);
 	Route::post('/import-user', ['as'=>'f.postImportUser', 'uses'=>'ImportController@postImportUser']);
-
-
 
 	// Route::get('/create-super', function(){
 	// 	$data = [
