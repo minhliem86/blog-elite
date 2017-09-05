@@ -15,7 +15,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">Center</label>
-                    {!!Form::select('center',$center,old('center_vi'),array('class'=>'form-control'))!!}
+                    {!!Form::select('center_id',$center,old('center_id'),array('class'=>'form-control'))!!}
                 </div>
                 <div class="form-group">
                     <label for="">Student Name</label>

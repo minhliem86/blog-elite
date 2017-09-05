@@ -97,8 +97,9 @@ class StudentController extends Controller {
 			'student_content_en' => $request->input('student_content_en'),
 			'student_img' => $img,
 			'type_id' =>$request->input('type_id'),
-			'center_vi' =>Center::find($request->input('center'))->name_vi,
-			'center_en' =>Center::find($request->input('center'))->name_en,
+			'center_id' =>$request->input('center_id'),
+			'center_vi' =>Center::find($request->input('center_id'))->name_vi,
+			'center_en' =>Center::find($request->input('center_id'))->name,
 			'order' => $order,
 		];
 		$this->student->create($data);
@@ -154,8 +155,9 @@ class StudentController extends Controller {
 			'student_content_en' => $request->input('student_content_en'),
 			'student_img' => $img,
 			'type_id' =>$request->input('type_id'),
-			'center_vi' =>Center::find($request->input('center'))->name_vi,
-			'center_en' =>Center::find($request->input('center'))->name_en,
+			'center_id' =>$request->input('center_id'),
+			'center_vi' =>Center::find($request->input('center_id'))->name_vi,
+			'center_en' =>Center::find($request->input('center_id'))->name,
 			'order' => $request->input('order'),
 		];
 		$this->student->update($data, $id);

@@ -30,7 +30,7 @@
                                         </div>
 
                                         <div class="post_content">
-                                            <p>{!!Str::words(LaravelLocalization::getCurrentLocale() === 'vi' ? $item_student->$item_student->student_content_vi : $item_student->$item_student->student_content_en, 40)!!}</p>
+                                            <p>{!!Str::words(LaravelLocalization::getCurrentLocale() === 'vi' ? $item_student->student_content_vi : $item_student->student_content_en, 40)!!}</p>
                                         </div>
 
 

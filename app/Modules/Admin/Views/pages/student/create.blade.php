@@ -9,15 +9,15 @@
 	<div class="box">
 		<div class="container-fluid">
 			{!!Form::open(array('route'=>array('admin.student.store'),'class'=>'formAdmin form-horizontal','files'=>true))!!}
-                <div class="form-group">
-                    <label for="">Type</label>
-                    {!!Form::select('type_id', $type,old('type_id'), ['class'=>'form-control'] )!!}
-                </div>
-                <div class="form-group">
-                    <label for="">Center</label>
-                    {!!Form::select('center', $center,old('center'), ['class'=>'form-control'] )!!}
-                </div>
-                <div class="form-group">
+        <div class="form-group">
+            <label for="">Type</label>
+            {!!Form::select('type_id', $type,old('type_id'), ['class'=>'form-control'] )!!}
+        </div>
+        <div class="form-group">
+            <label for="">Center</label>
+            {!!Form::select('center_id', $center,old('center_id'), ['class'=>'form-control'] )!!}
+        </div>
+        <div class="form-group">
 					<label for="">Student Name</label>
 					{!!Form::text('student_name',old('student_name'),array('class'=>'form-control'))!!}
 				</div>

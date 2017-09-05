@@ -18,7 +18,7 @@ class EditStudentTable extends Migration {
 			$table->renameColumn('student_content', 'student_content_vi');
 			$table->string('center_en')->after('center')->nullable();
 			$table->string('student_content_en')->after('student_content')->nullable();
-			// $table->string('center_id')->nullable();
+			$table->string('center_id')->nullable();
 		});
 	}
 

@@ -6,7 +6,7 @@ class Student extends Model {
 
 	public $table =  'students';
 
-    protected $fillable = ['student_name', 'slug', 'student_age', 'student_year', 'student_content', 'center', 'type_id','order', 'status', 'student_img'];
+    protected $fillable = ['student_name', 'slug', 'student_age', 'student_year', 'student_content_vi', 'student_content_en', 'center_vi', 'center_en', 'center_id', 'type_id','order', 'status', 'student_img'];
 
     public function types()
     {
