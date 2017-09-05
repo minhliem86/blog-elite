@@ -16,7 +16,7 @@ class TypeRepository extends BaseRepository implements RestfulInterface{
     public function getAllByStatus($columns = ['*'], $with= [])
     {
         $query = $this->make($with);
-        return $query->where('status',1)->OrderBy('id', 'ASC')->get($columns);
+        return $query->where('status',1)->OrderBy('order', 'ASC')->get($columns);
     }
 
 }

@@ -22,6 +22,6 @@ class StudentRepository extends BaseRepository implements RestfulInterface{
     public function getByOrderStudentPaginate($limit = 10, $columns = ['*'], $with = [])
     {
         $query = $this->make($with);
-        return $query->where('status',1)->OrderBy('id', 'ASC')->paginate($limit, $columns);
+        return $query->where('status',1)->OrderBy('order', 'ASC')->paginate($limit, $columns);
     }
 }

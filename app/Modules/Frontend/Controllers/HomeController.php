@@ -22,6 +22,10 @@ class HomeController extends Controller {
     {
         $student = $this->student->getByOrderStudentPaginate(10,['*'], ['types']);
         // dd($student);
+        if(\LaravelLocalization::getCurrentLocale() === 'en')
+        {
+            $student->setPath('en');
+        }
         return view('Frontend::pages.index', compact('student'));
     }
 

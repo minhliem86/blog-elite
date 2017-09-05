@@ -78,7 +78,7 @@
                     alertify.confirm('You can not undo this action. Are you sure ?', function(e){
                         if(e){
                             $.ajax({
-                                'url':"{!!route('admin.type.deleteAll')!!}",
+                                'url':"{!!route('admin.student.deleteAll')!!}",
                                 'data' : {arr: data,_token:$('meta[name="csrf-token"]').attr('content')},
                                 'type': "POST",
                                 'success':function(result){
@@ -103,7 +103,7 @@
                         data_order[id] = va;
                     });
                     $.ajax({
-                        url: '{{route("admin.type.postAjaxUpdateOrder")}}',
+                        url: '{{route("admin.student.postAjaxUpdateOrder")}}',
                         type:'POST',
                         data: {data: data_order,  _token:$('meta[name="csrf-token"]').attr('content') },
                         success: function(rs){
@@ -115,7 +115,7 @@
                     })
                 })
 
-                $('input[name="status"]').on('change', function(){
+                $(document).on('change','input[name="status"]', function(){
                     var rows_order = table_api.rows().data();
                     var value;
                     if($(this).is(':checked')){
@@ -125,7 +125,7 @@
                     }
                     var id = $(this).data('id');
                     $.ajax({
-                        url: '{{route("admin.type.postAjaxUpdateStatus")}}',
+                        url: '{{route("admin.student.postAjaxUpdateStatus")}}',
                         type:'POST',
                         data: {value: value, id: id ,  _token:$('meta[name="csrf-token"]').attr('content') },
                         success: function(rs){

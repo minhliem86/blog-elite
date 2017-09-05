@@ -35,6 +35,10 @@ class Kernel extends HttpKernel {
 		'customer_logined'=>'App\Http\Middleware\RedirectIfAuthCustomer',
 		'customer_login_not_yet' => 'App\Http\Middleware\CustomerAuthenticate',
 		'check_super_user' => 'App\Http\Middleware\CheckSuperUser',
+
+		'localize' => '\Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes',
+		'localizationRedirect' => '\Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter',
+		'localeSessionRedirect' => '\Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect',
 	];
 
 }

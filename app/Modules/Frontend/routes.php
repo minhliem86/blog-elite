@@ -1,6 +1,8 @@
 <?php
 
-Route::group(['prefix'=>LaravelLocalization::setLocale() ,'namespace'=>'App\Modules\Frontend\Controllers'],function(){
+Route::group(['prefix'=>LaravelLocalization::setLocale(),
+						// 'middleware' => [ 'localeSessionRedirect', 'localizationRedirect' ],
+						'namespace'=>'App\Modules\Frontend\Controllers'],function(){
 	// Route::get('/',['as'=>'home','uses'=>'HomeController@getIndex']);
 
 	Route::get('/locale', ['as' => 'f.locale', 'uses' => 'HomeController@testLanguage']);

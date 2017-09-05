@@ -20,10 +20,10 @@
                                     <div class="post_header">
                                         <h5>{{$student->student_name}}</h5>
                                         <div class="post_detail">
-                                            {{$student->center}} - {{$student->types->name}}
+                                            {{LaravelLocalization::getCurrentLocale() === 'vi' ? $student->center_vi : $student->center_en }} - {{$student->types->name}}
                                         </div>
                                         <div class="post_content">
-                                            <p>{!!$student->student_content!!}</p>
+                                            <p>{!!LaravelLocalization::getCurrentLocale() === 'vi' ? $student->student_content_vi : $student->student_content_en !!}</p>
                                         </div>
                                     </div>	<!-- end post header -->
 

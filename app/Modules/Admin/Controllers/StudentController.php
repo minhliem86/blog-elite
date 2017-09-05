@@ -159,6 +159,7 @@ class StudentController extends Controller {
 			'center_vi' =>Center::find($request->input('center_id'))->name_vi,
 			'center_en' =>Center::find($request->input('center_id'))->name,
 			'order' => $request->input('order'),
+			'status' => $request->input('status')
 		];
 		$this->student->update($data, $id);
 		Notification::success('Updated.');
