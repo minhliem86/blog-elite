@@ -19,6 +19,7 @@
         <ul class="nav navbar-nav">
           @if(Auth::admin()->get()->hasRole('admin'))
           <!--MANAGE USER-->
+        <!--
           <li class="dropdown messages-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-user"></i> User Management
@@ -32,6 +33,7 @@
               </li>
             </ul>
           </li>
+          -->
           <!--END-->
           @endif
 
