@@ -36,7 +36,7 @@ Route::group(['prefix'=>'admin','namespace'=>'App\Modules\Admin\Controllers'],fu
 	Route::get('logout',['as'=>'admin.getLogout','uses'=>'Auth\AuthController@getLogout']);
 
 	Route::group(['middleware'=>'checkLogin'],function(){
-		Route::get('dashboard',['as'=>'admin','uses'=>'AdminController@index']);
+		Route::get('dashboard',['as'=>'admin','uses'=>'GaController@dashboard']);
 
 		Route::group(['middleware'=>'checkAdminRole'], function(){
 			/*TYPE*/
@@ -55,6 +55,7 @@ Route::group(['prefix'=>'admin','namespace'=>'App\Modules\Admin\Controllers'],fu
 			/*Image*/
 			Route::post('image/deleteall',['as'=>'admin.image.deleteall','uses'=>'ImageController@deleteAll']);
 			Route::resource('image','ImageController');
+
 			// MANAGE USER
 			Route::get('/create-user',['as'=>'admin.getCreateUser', 'uses'=>'AdminController@getCreateUser']);
 			Route::post('/create-user', ['as'=>'admin.postCreateUser', 'uses'=>'AdminController@postCreateUser']);

@@ -157,8 +157,8 @@ return [
 		 'Zizaco\Entrust\EntrustServiceProvider',
 		 'Maatwebsite\Excel\ExcelServiceProvider',
 		 'Codingo\Dropzoner\DropzonerServiceProvider',
-		 'Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider'
-
+		 'Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider',
+		 'Spatie\LaravelAnalytics\LaravelAnalyticsServiceProvider'
 	],
 
 	/*
@@ -214,7 +214,8 @@ return [
 	  	'Str'      => 'Illuminate\Support\Str',
 		'Entrust'   => 'Zizaco\Entrust\EntrustFacade',
 		'Excel' => 'Maatwebsite\Excel\Facades\Excel',
-		'LaravelLocalization' => 'Mcamara\LaravelLocalization\Facades\LaravelLocalization'
+		'LaravelLocalization' => 'Mcamara\LaravelLocalization\Facades\LaravelLocalization',
+		'Analytics' => 'Spatie\LaravelAnalytics\LaravelAnalyticsFacade',
 	],
 
 

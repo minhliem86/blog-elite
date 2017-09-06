@@ -9,19 +9,67 @@
         Dashboard
         <small>Analytic</small>
       </h1>
-      <!-- <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
-      </ol> -->
     </section>
 
     <!-- Main content -->
     <section class="content">
-
-      <!-- Your Page Content Here -->
-
+        <div class="chart-area">
+            <canvas id="mychart"></canvas>
+        </div>
     </section>
     <!-- /.content -->
 
   <!-- /.content-wrapper -->
+@stop
+@section('script')
+    <script src="{!!asset('/public/assets/backend/js/Chart.js') !!}"></script>
+    <script>
+        $(document).ready(function(){
+            var ctx = document.getElementById('mychart');
+            var myLineChart = new Chart(ctx, {
+                type: 'line',
+                data:{
+                    labels: [
+                         @foreach($data as  $value)
+                            '{!! $value['date'] !!}',
+                         @endforeach
+                    ],
+                    datasets:[
+                        {
+                            label: "Visitors",
+                            borderColor: '#e84343',
+                            data: [
+                                @foreach($data as  $value)
+                                   '{!! $value['visitors'] !!}',
+                                @endforeach
+                            ],
+                            fill: false,
+                        },
+                        {
+                            label: "Page Views",
+                            borderColor: '#1515ed',
+                            data: [
+                                @foreach($data as  $value)
+                                   '{!! $value['pageviews'] !!}',
+                                @endforeach
+                            ],
+                            fill: false,
+                        }
+                    ]
+
+                },
+                options: {
+                    responsive: true,
+                    legend: {
+                        display: true,
+                        position: 'bottom'
+                    },
+                    title:{
+                        display:true,
+                        text:'Report Pageviews & Visitors ',
+                    },
+                }
+            });
+        })
+    </script>
 @stop

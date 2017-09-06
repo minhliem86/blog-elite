@@ -57,7 +57,7 @@ class StudentController extends Controller {
 				';
 		 })->filter(function($query) use ($request){
 			if ($request->has('name')) {
-					$query->where('students.student_name_vi', 'like', "%{$request->input('name')}%")->orWhere('types.name', 'like', "%{$request->input('name')}%");
+					$query->where('students.student_name', 'like', "%{$request->input('name')}%")->orWhere('types.name', 'like', "%{$request->input('name')}%");
 			}
 			})->setRowId('id')->make(true);
 	}
