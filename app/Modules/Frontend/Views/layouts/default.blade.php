@@ -27,7 +27,7 @@
 		</style>
 
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=vietnamese" rel="stylesheet">
-		<link rel='stylesheet' id='animation.css-css'  href='{!!asset('public/assets/frontend')!!}/css/animation.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='animation.css-css'  href='{!!asset('public/assets/frontend')!!}/css/animate.min.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='magnific-popup-css'  href='{!!asset('public/assets/frontend')!!}/css/magnific-popup.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='flexslider-css'  href='{!!asset('public/assets/frontend')!!}/js/flexslider/flexslider.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='tooltipster-css'  href='{!!asset('public/assets/frontend')!!}/css/tooltipster.css' type='text/css' media='all' />
@@ -42,9 +42,13 @@
 		<link rel='stylesheet' id='responsive-css'  href='{!!asset('public/assets/frontend')!!}/css/custom/header-mobile.css' type='text/css' media='all' />
 		@endif
 		<script type='text/javascript' src='{!!asset('public/assets/frontend')!!}/js/jquery-2.1.1.js'></script>
+		<script type='text/javascript' src='{!!asset('public/assets/frontend')!!}/js/turn.js'></script>
 		<script type='text/javascript' src='{!!asset('public/assets/frontend')!!}/js/flexslider/jquery.flexslider-min.js'></script>
 		<script src="{!!asset('public/assets/frontend')!!}/js/jquery.easing.js"></script>
 		<script src="{!!asset('public/assets/frontend')!!}/js/ParallaxScroll.js"></script>
+		<link rel='stylesheet'   href='{!!asset('public/assets/frontend')!!}/js/remodal/remodal.css' type='text/css' media='all' />
+		<link rel='stylesheet'   href='{!!asset('public/assets/frontend')!!}/js/remodal/remodal-default-theme.css' type='text/css' media='all' />
+		<script src="{!!asset('public/assets/frontend')!!}/js/remodal/remodal.min.js"></script>
 		<script>
 			$(document).ready(function(){
 				$('#mobile_nav_icon').click(function() {
@@ -104,6 +108,8 @@
 					return false;
 				})
 				@endif
+
+
 			})
 		</script>
 		<link rel="canonical" href="index.html" />
@@ -124,5 +130,6 @@
             @yield('content')
             <br class="clear"/>
         </div> <!-- end wrapper-->
+		@yield('script')
     </body>
 </html>

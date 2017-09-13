@@ -8,7 +8,6 @@
                 <div class="full_width nopadding">
                     @include('Frontend::layouts.sidebar_content')
                     <div class="sidebar_content left_sidebar">
-                        @include('Frontend::layouts.navi_type')
                         @if(!empty($student))
                         <!-- Begin each blog post -->
                         <div class="post type-post status-publish">
@@ -34,6 +33,7 @@
                         <br class="clear"/>
                         <!-- End each blog post -->
                         @endif
+                        @include('Frontend::layouts.navi_type')
                     </div> <!-- end sidebar content -->
                     <div class="clear"></div>
 

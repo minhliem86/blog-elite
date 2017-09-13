@@ -14,11 +14,11 @@ class EditStudentTable extends Migration {
 	{
 		Schema::table('students', function(Blueprint $table)
 		{
-			$table->renameColumn('center', 'center_vi');
-			$table->renameColumn('student_content', 'student_content_vi');
-			$table->string('center_en')->after('center')->nullable();
-			$table->string('student_content_en')->after('student_content')->nullable();
-			$table->string('center_id')->nullable();
+			// $table->renameColumn('center', 'center_vi');
+			// $table->renameColumn('student_content', 'student_content_vi');
+			// $table->string('center_en')->after('center')->nullable();
+			// $table->string('student_content_en')->after('student_content')->nullable();
+			// $table->string('center_id')->nullable();
 		});
 	}
 
@@ -31,11 +31,11 @@ class EditStudentTable extends Migration {
 	{
 		Schema::table('students', function(Blueprint $table)
 		{
-			$table->renameColumn('center_vi', 'center');
-			$table->renameColumn('student_content_vi', 'student_content');
-			$table->dropColumn('center_en');
-			$table->dropColumn('student_content_en');
-			$table->dropColumn('center_id');
+			// $table->renameColumn('center_vi', 'center');
+			// $table->renameColumn('student_content_vi', 'student_content');
+			// $table->dropColumn('center_en');
+			// $table->dropColumn('student_content_en');
+			// $table->dropColumn('center_id');
 		});
 	}
 

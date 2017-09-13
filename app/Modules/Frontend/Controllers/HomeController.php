@@ -20,12 +20,12 @@ class HomeController extends Controller {
 
     public function index()
     {
-        $student = $this->student->getByOrderStudentPaginate(10,['*'], ['types']);
-        // dd($student);
+        $student = $this->student->getByOrderStudentPaginate(10 ,['*'], ['types']);
         if(\LaravelLocalization::getCurrentLocale() === 'en')
         {
             $student->setPath('en');
         }
+        $count = $this->student->findByField('type_id',2,['*'])->count();
         return view('Frontend::pages.index', compact('student'));
     }
 
@@ -49,5 +49,13 @@ class HomeController extends Controller {
     public function testLanguage()
     {
         return view('Frontend::pages.language');
+    }
+
+    public function loadMagazine(Request $request)
+    {
+        if($request->ajax()){
+            $view = view('Frontend::ajax.loadMagazine')->render();
+            return response()->json(['rs' => $view,  'code'=>200],200);
+        }
     }
 }

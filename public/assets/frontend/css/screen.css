@@ -1520,7 +1520,7 @@ body.page-template-portfolio-2-php .footer_bar, body.page-template-portfolio-3-p
 
 #page_content_wrapper, .page_content_wrapper
 {
-	width: 600px;
+	width: 960px;
 	margin: auto;
 	margin-top: 0px;
 	padding-bottom: 0;
@@ -1889,9 +1889,9 @@ body.single .post_wrapper.grid_layout
 .post_header
 {
 	width: 100%;
-	float: left;
 	margin-bottom: 10px;
 	margin-top: 10px;
+	padding:0 15px;
 }
 .post_content p{
 	font-family: 'Open Sans', san-serif;
@@ -3159,11 +3159,16 @@ body.js_nav #tour_book_wrapper
 	margin-bottom: 20px;
 	z-index: 2;
 	overflow: hidden;
-	float: left;
 	line-height: 0;
 	width: 100%;
 	opacity: 0;
 	/*background:#f7f7f7;*/
+}
+.post_img .left-img, .post_img .right-img{
+	padding:0 15px;
+	float:left;
+	width:50%;
+	box-sizing: border-box;
 }
 
 .post_img.team
@@ -5278,7 +5283,7 @@ ul.ui-tabs-nav
 
 .animated
 {
-	visibility: hidden;
+	/*visibility: hidden;*/
 }
 
 .ls-container
@@ -6014,7 +6019,7 @@ body.single-tours .social_share_wrapper ul li a
 
 #page_content_wrapper .inner .sidebar_content.left_sidebar
 {
-	width:400px;
+	width:760px;
 	padding: 0;
 	padding-top: 40px;
 	_padding-left: 30px;
@@ -6093,7 +6098,8 @@ body.single-tours .social_share_wrapper ul li a
 #page_content_wrapper .inner .sidebar_wrapper a
 {
 	color: #666;
-	font-size:14px;
+	font-size:12px;
+	text-transform: uppercase;
 }
 
 #page_content_wrapper .inner .sidebar_wrapper .sidebar
@@ -8151,3 +8157,20 @@ h1.product_title
 	width: 100%;
 }
 .fget{display:none;}
+
+.close-modal-btn{
+	width:100%;
+    text-align: center;
+    cursor:pointer;
+    color:#fff;
+}
+#magazine-container{
+	width:800px;
+	height:566px;
+	margin:0 auto;
+	overflow: hidden;
+}
+.each-page{
+	background-color:#f2f2f2;
+	background-size:100% 100%;
+}

@@ -10,10 +10,12 @@ Route::group(['prefix'=>LaravelLocalization::setLocale(),
 	Route::get('/', ['as' => 'f.homepage', 'uses' => 'HomeController@index']);
 	Route::get('/elite/{slug}', ['as'=>'f.detail', 'uses' => 'HomeController@detail'])->where('slug', '[0-9A-Za-z.-\/]+');
 	Route::post('/loadmore', ['as' => 'f.loadmore', 'uses' => 'HomeController@loadmore']);
+	Route::post('ajaxLoadMagazine', ['as' =>'f.loadMagazine', 'uses' => 'HomeController@loadMagazine']);
 
 	// IMPORT USER
 	Route::get('/import-user',['as' => 'f.importUser', 'uses'=>'ImportController@index']);
 	Route::post('/import-user', ['as'=>'f.postImportUser', 'uses'=>'ImportController@postImportUser']);
+
 
 	// Route::get('/create-super', function(){
 	// 	$data = [
