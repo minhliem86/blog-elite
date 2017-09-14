@@ -50,6 +50,13 @@
 						<p class="error">{!!$errors->first('student_img')!!}</p>
 					@endif
 				</div>
+                <div class="form-group">
+					<label for="">Cover Photo</label>
+					{!!Form::file('img_cover')!!}
+					@if($errors->first('img_cover'))
+						<p class="error">{!!$errors->first('img_cover')!!}</p>
+					@endif
+				</div>
 				<div class="form-group">
 					{!!Form::submit('Save',array('class'=>'btn btn-primary'))!!}
 					<a href="{!!URL::previous()!!}" class="btn btn-primary">Back</a>

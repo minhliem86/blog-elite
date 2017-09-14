@@ -1899,6 +1899,8 @@ body.single .post_wrapper.grid_layout
 	font-size:14px;
 	line-height: 21px;
 }
+.post_header .wrap-read{
+}
 
 body.search .post_header
 {
@@ -6027,6 +6029,11 @@ body.single-tours .social_share_wrapper ul li a
 	float: right;
 	box-sizing: border-box;
 }
+@media only screen and (max-width: 960px) and (min-width: 768px){
+	#page_content_wrapper .inner .sidebar_content.left_sidebar{
+		width:536px;
+	}
+}
 
 #page_content_wrapper .inner .sidebar_content.full_width
 {
@@ -6046,6 +6053,7 @@ body.single-tours .social_share_wrapper ul li a
 {
 	max-width: 100%;
 	height: auto !important;
+	max-height:495px;
 }
 
 #page_content_wrapper .inner .sidebar_content div.wp-caption
@@ -8169,6 +8177,19 @@ h1.product_title
 	height:566px;
 	margin:0 auto;
 	overflow: hidden;
+	background:#f2f2f2;
+}
+@media screen and (max-width:480px){
+	#magazine-container{
+		width:auto;
+		height:300px;
+	}
+}
+@media screen and (max-width:768px){
+	#magazine-container{
+		width:auto;
+		height:450px;
+	}
 }
 .each-page{
 	background-color:#f2f2f2;

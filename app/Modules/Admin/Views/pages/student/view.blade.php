@@ -70,6 +70,18 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="">Cover Photo</label>
+                    <p>
+  						<img src="{!!asset('public/uploads'.$student->img_cover)!!}" width="150" alt="">
+  						{!!Form::hidden('cover-img-bk',$student->img_cover)!!}
+  					</p>
+                    {!!Form::file('img_cover')!!}
+                    @if($errors->first('img_cover'))
+                        <p class="error">{!!$errors->first('img_cover')!!}</p>
+                    @endif
+                </div>
+
+                <div class="form-group">
                     {!!Form::submit('Save',array('class'=>'btn btn-primary'))!!}
                     <a href="{!!URL::previous()!!}" class="btn btn-primary">Back</a>
                 </div>

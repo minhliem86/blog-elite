@@ -24,8 +24,8 @@
                                               </a>
                                         </div>
                                         <div class="right-img">
-                                            <a data-remodal-target="modal" data-id={{$item_student->id}} class="trigger-btn" >
-                                                <img src="{!!asset('public/uploads'.$item_student->student_img)!!}" alt="{{$item_student->student_name}}" class="img-responsive">
+                                            <a data-remodal-target="modal" href="#" data-id={{$item_student->id}} class="trigger-btn" >
+                                                <img src="{!!asset('public/uploads'.$item_student->img_cover)!!}" alt="{{$item_student->student_name}}" class="img-responsive">
                                               </a>
                                         </div>
                                         <div class="clear"></div>
@@ -66,7 +66,7 @@
             <!-- End main content -->
         </div>
 </div> <!-- end page_content_wrapper-->
-<div class="remodal" data-remodal-id="modal" data-remodal-options="closeOnOutsideClick: false">
+<div class="remodal" data-remodal-id="modal" data-remodal-options="hashTracking: false">
     <button data-remodal-action="close" class="remodal-close"></button>
     <div class="modal-content">
 
@@ -86,7 +86,9 @@
                         data: {_token: $('meta[name="csrf-token"]').attr('content')},
                         success: function(data){
                             $('.modal-content').html(data.rs);
-                                $('#magazine-container').turn({ })
+                                $('#magazine-container').turn({
+                                    // display:"single"
+                                 })
                         }
                     })
                 })

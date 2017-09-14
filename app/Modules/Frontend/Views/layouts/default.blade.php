@@ -109,7 +109,6 @@
 				})
 				@endif
 
-
 			})
 		</script>
 		<link rel="canonical" href="index.html" />

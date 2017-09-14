@@ -87,6 +87,12 @@ class StudentController extends Controller {
 		}else{
 			$img = "";
 		}
+		if($img_request->hasFile('img_cover')){
+			$img_cover = $this->common->uploadImage($request, $request->file('img_cover'), $this->_upload, false);
+			$img_cover = $this->common->getPath($img_cover, asset('public/uploads'));
+		}else{
+			$img_cover = "";
+		}
 		$order = $this->student->getOrder();
 		$data = [
 			'student_name' => $request->input('student_name'),
@@ -96,6 +102,7 @@ class StudentController extends Controller {
 			'student_content_vi' => $request->input('student_content_vi'),
 			'student_content_en' => $request->input('student_content_en'),
 			'student_img' => $img,
+			'img_cover' => $img_cover,
 			'type_id' =>$request->input('type_id'),
 			'center_id' =>$request->input('center_id'),
 			'center_vi' =>Center::find($request->input('center_id'))->name_vi,
@@ -146,6 +153,12 @@ class StudentController extends Controller {
 		}else{
 			$img = $request->input('student-img-bk');
 		}
+		if($img_request->hasFile('img_cover')){
+			$img_cover = $this->common->uploadImage($request, $request->file('img_cover'), $this->_upload, false);
+			$img_cover = $this->common->getPath($img_cover, asset('public/uploads'));
+		}else{
+			$img_cover = $request->input('cover-img-bk');
+		}
 		$data = [
 			'student_name' => $request->input('student_name'),
 			'slug' => \Unicode::make($request->input('student_name')),
@@ -154,6 +167,7 @@ class StudentController extends Controller {
 			'student_content_vi' => $request->input('student_content_vi'),
 			'student_content_en' => $request->input('student_content_en'),
 			'student_img' => $img,
+			'img_cover' => $img_cover,
 			'type_id' =>$request->input('type_id'),
 			'center_id' =>$request->input('center_id'),
 			'center_vi' =>Center::find($request->input('center_id'))->name_vi,
