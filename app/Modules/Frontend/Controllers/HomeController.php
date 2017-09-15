@@ -54,8 +54,21 @@ class HomeController extends Controller {
     public function loadMagazine(Request $request)
     {
         if($request->ajax()){
-            $view = view('Frontend::ajax.loadMagazine')->render();
+            $id = $request->input('id');
+            $student = $this->student->find($id, ['id','img_cover']);
+            $view = view('Frontend::ajax.loadMagazine', compact('student'))->render();
             return response()->json(['rs' => $view,  'code'=>200],200);
+        }
+    }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+        if($keyword){
+            $student = $this->student->searchByKeyword($keyword, ['types']);
+            return view('Frontend::pages.search', compact('student'));
+        }else{
+            return redirect()->back()->with('message','Vui lòng nhập tên học viên.');
         }
     }
 }

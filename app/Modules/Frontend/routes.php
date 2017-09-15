@@ -12,6 +12,9 @@ Route::group(['prefix'=>LaravelLocalization::setLocale(),
 	Route::post('/loadmore', ['as' => 'f.loadmore', 'uses' => 'HomeController@loadmore']);
 	Route::post('ajaxLoadMagazine', ['as' =>'f.loadMagazine', 'uses' => 'HomeController@loadMagazine']);
 
+	/*SEARCH*/
+	Route::get('search', ['as' => 'f.search', 'uses' => 'HomeController@search']);
+
 	// IMPORT USER
 	Route::get('/import-user',['as' => 'f.importUser', 'uses'=>'ImportController@index']);
 	Route::post('/import-user', ['as'=>'f.postImportUser', 'uses'=>'ImportController@postImportUser']);

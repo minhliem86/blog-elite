@@ -24,4 +24,10 @@ class StudentRepository extends BaseRepository implements RestfulInterface{
         $query = $this->make($with);
         return $query->where('status',1)->OrderBy('order', 'ASC')->paginate($limit, $columns);
     }
+
+    public function searchByKeyword($keyword, $with = [])
+    {
+        $query = $this->make($with);
+        return $query->where('student_name','LIKE', '%'.$keyword.'%')->get();
+    }
 }

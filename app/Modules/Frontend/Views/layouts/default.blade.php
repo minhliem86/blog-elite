@@ -8,8 +8,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<meta name="csrf-token" content="{{ csrf_token() }}">
+		<meta name="description" content="ILA ELITE- Học tiếng Anh tại Trung Tâm giảng dạy Anh ngữ hàng đầu Việt Nam với 100% giáo viên nước ngoài.">
+	    <meta name="keywords" content="ILA, học tiếng Anh, khóa học tiếng anh, trung tâm anh ngữ, trung tâm tiếng anh, trung tâm anh ngữ cho trẻ em">
 		<meta name="format-detection" content="telephone=no">
-		<title>Blog | Elite Blog</title>
+		<title>ILA ELITE</title>
 
 		<style type="text/css">
 		img.wp-smiley,
@@ -110,6 +112,17 @@
 				@endif
 
 			})
+		</script>
+		<!-- GA -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-60129748-1', 'auto');
+		  ga('send', 'pageview');
+
 		</script>
 		<link rel="canonical" href="index.html" />
 	</head>

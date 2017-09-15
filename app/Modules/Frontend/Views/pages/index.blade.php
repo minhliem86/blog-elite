@@ -66,7 +66,7 @@
             <!-- End main content -->
         </div>
 </div> <!-- end page_content_wrapper-->
-<div class="remodal" data-remodal-id="modal" data-remodal-options="hashTracking: false">
+<div class="remodal" data-remodal-id="modal" data-remodal-options="hashTracking: false, closeOnOutsideClick: false">
     <button data-remodal-action="close" class="remodal-close"></button>
     <div class="modal-content">
 
@@ -83,7 +83,7 @@
                     $.ajax({
                         url: '{{route("f.loadMagazine")}}',
                         type: 'POST',
-                        data: {_token: $('meta[name="csrf-token"]').attr('content')},
+                        data: { id: id,  _token: $('meta[name="csrf-token"]').attr('content')},
                         success: function(data){
                             $('.modal-content').html(data.rs);
                                 $('#magazine-container').turn({

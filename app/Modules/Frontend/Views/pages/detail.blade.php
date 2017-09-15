@@ -13,8 +13,16 @@
                         <div class="post type-post status-publish">
                             <div class="post_wrapper">
                                 <div class="post_content_wrapper">
-                                    <div class="post_img static fadeIn">
-                                        <img src="{!!asset('public/uploads'.$student->student_img)!!}" alt="{{$student->student_name}}" class="img-responsive">
+                                    <div class="post_img static fadeIn animated">
+                                        <div class="left-img">
+                                                <img src="{!!asset('public/uploads'.$student->student_img)!!}" alt="{{$student->student_name}}" class="img-responsive">
+                                        </div>
+                                        <div class="right-img">
+                                            <a data-remodal-target="modal" href="#" data-id={{$student->id}} class="trigger-btn" >
+                                                <img src="{!!asset('public/uploads'.$student->img_cover)!!}" alt="{{$student->student_name}}" class="img-responsive">
+                                              </a>
+                                        </div>
+                                        <div class="clear"></div>
                                     </div>
                                     <div class="post_header">
                                         <h5>{{$student->student_name}}</h5>
@@ -43,4 +51,38 @@
             <!-- End main content -->
         </div>
     </div> <!-- end page_content_wrapper-->
+    <div class="remodal" data-remodal-id="modal" data-remodal-options="hashTracking: false, closeOnOutsideClick: false">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <div class="modal-content">
+
+        </div>
+    </div>
+@stop
+
+@section('script')
+    <script>
+        $(document).ready(function(){
+            $('.trigger-btn').click(function(){
+                var id = $(this).data('id');
+                $(document).on('opening', '.remodal', function(){
+                    $.ajax({
+                        url: '{{route("f.loadMagazine")}}',
+                        type: 'POST',
+                        data: { id: id,  _token: $('meta[name="csrf-token"]').attr('content')},
+                        success: function(data){
+                            $('.modal-content').html(data.rs);
+                                $('#magazine-container').turn({
+                                    // display:"single"
+                                 })
+                        }
+                    })
+                })
+                $(document).on('closed', '.remodal', function(){
+                    $('#magazine-container').turn("destroy")
+
+                })
+            })
+        })
+
+    </script>
 @stop

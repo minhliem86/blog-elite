@@ -1,5 +1,5 @@
 <div id="magazine-container">
-    <div class="each-page" style="background-image:url('{{asset('/public/assets/frontend/images/magazine/bocmyhuong.jpg')}}')"></div>
+    <div class="each-page" style="background-image:url('{{asset('/public/uploads').$student->img_cover}}')"></div>
     <div class="each-page" style="background-image:url('{{asset('/public/assets/frontend/images/magazine/bia2.png')}}')"></div>
     <div class="each-page" style="background-image:url('{{asset('/public/assets/frontend/images/magazine/bia3.png')}}')"></div>
     <div class="each-page" style="background-image:url('{{asset('/public/assets/frontend/images/magazine/bia4.png')}}')"></div>

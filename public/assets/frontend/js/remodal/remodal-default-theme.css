@@ -95,8 +95,8 @@
 
 .remodal-close {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -17px;
+  left: -17px;
 
   display: block;
   overflow: visible;
@@ -124,9 +124,9 @@
 
 .remodal-close:before {
   font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif !important;
-  font-size: 25px;
+  font-size: 30px;
   line-height: 35px;
-
+    color:white;
   position: absolute;
   top: 0;
   left: 0;
@@ -138,6 +138,7 @@
   content: "\00d7";
   text-align: center;
 }
+
 
 /* Dialog buttons */
 
